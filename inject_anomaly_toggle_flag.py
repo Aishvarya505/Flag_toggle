@@ -46,7 +46,7 @@ def random_scenario():
     sheet = workbook.active
     sheet.append(['Start Time (UTC)', 'End Time (UTC)', 'Anomaly Type', 'Flag(s)'])
 
-    for _ in range(100):
+    for _ in iter(int, 1):
         if random.random() < ANOMALY_PROBABILITY:
             # Choose an anomaly scenario
             scenario_type = random.choice(['point', 's_long', 'multiple'])
